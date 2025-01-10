@@ -170,7 +170,9 @@ footer img {
     vertical-align: middle;
     margin-left: 5px;
 }
-
+.footer-img {
+    width: 20px;
+}
 .last-modified {
     color: yellow;
     font-size: 0.9em;
@@ -184,7 +186,4 @@ span {
 figure{
     padding-left: 155px;
     
-}
-.footer-icon {
-    width: 20px;
 }
