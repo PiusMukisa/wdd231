@@ -13,73 +13,58 @@
 </head>
 <body>
    <header>
-    <div class="hed">
-        <img src="images/mukisa.jpg" alt="Image of Pius Mukisa">
-        <h1>Pius M. Mukisa</h1>
-    </div>
-    <nav>
-        <div class="navbar">
+      <div class="hed">
+         <img src="images/mukisa.jpg" alt="Image of Pius Mukisa">
+         <h1>Pius M. Mukisa</h1>
+      </div>
+      <nav>
+         <div class="navbar">
+            <button id="menu-toggle" class="menu-button">☰ Menu</button>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="#">GitHub Profile</a></li>
-                <li><a href="#">LinkedIn</a></li>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="#">Chamber</a></li>
+               <li><a href="https://github.com/PiusMukisa/wdd231">GitHub Profile</a></li>
+               <li><a href="https://www.linkedin.com/checkpoint/lg/login-submit">LinkedIn</a></li>
             </ul>
-        </div>
-    </nav>
+         </div>
+      </nav>
    </header> 
 
    <main>
-
-    <section>
-        <div class="table1">
+      <section>
+         <div class="table1">
             <h2>Course Work</h2>
-            <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+            <ul id="courseList">
             </ul>
-        </div>
+         </div>
 
-        <div class="table2">
+         <div class="table2">
             <h2>Toloria, Madagascar</h2>
             <img src="images/baoba.jpg" alt="Baobab trees">
-          
             <figure>Baobab trees</figure>
-        </div>
+         </div>
+      </section>
 
-    </section>
-    <section>
-        
-        <!-- This section below has increased my understanding about the display grid -->
-    </section>
-    <section>
-        <div class="certificate-container">
+      <section>
+         <div class="certificate-container">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="certificate-buttons">
-                <button >All</button>
-                <button >CSE</button>
-                <button >WDD</button>
+               <button id="filter-all">All</button>
+               <button id="filter-cse">CSE</button>
+               <button id="filter-wdd">WDD</button>
             </div>
-            
-            <div class="certificate-list">
-                <button  >CSE 110</button>
-                <button >CSE 210</button>
-                <button >CSE 111</button>
-                <div class="come"><button >WDD 231</button></div>
-                <button >WDD 131</button>
-                <div class="come"><button >WDD 231</button></div>
-            </div>
-        </div>
-    </section>
-
+            <div class="certificate-list" id="certificateList"></div>
+            <p>Total Credits: <span id="totalCredits">0</span></p>
+         </div>
+      </section>
    </main>
 
    <footer>
-    <p>© <span id="currentyear"></span>  🌺 Pius Mukisa 🌺 Uganda <img src="images/download.jpg" alt="pearl of Africa" width="20px"></p>
-    <p id="lastModified" class="header-highlight"></p>
-</footer>
+      <p>© <span id="currentyear"></span> 🌺 Pius Mukisa 🌺 Uganda 
+         <img src="images/download.jpg" alt="pearl of Africa" width="20px">
+      </p>
+      <p id="lastModified"></p>
+   </footer>
    <script src="scripts/scripts.js" defer></script>
-
 </body>
 </html>
