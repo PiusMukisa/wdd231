@@ -53,7 +53,8 @@ function filterCourses(type = 'all') {
 
 // Set the current year and last modified date
 document.getElementById('currentyear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = `Last Update: ${document.lastModified}`;
+document.getElementById('lastModified').textContent = `Last Update: ${document.lastModified}`; 
+
 
 // Initial display
 filterCourses('all');
