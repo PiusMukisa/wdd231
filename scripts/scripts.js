@@ -1,55 +1,60 @@
-// Array of courses
+// Course Data
 const courses = [
-    { name: "CSE 110", type: "CSE", credits: 3 },
-    { name: "CSE 210", type: "CSE", credits: 4 },
-    { name: "CSE 111", type: "CSE", credits: 2 },
-    { name: "WDD 231", type: "WDD", credits: 3 },
-    { name: "WDD 131", type: "WDD", credits: 2 }
+    { code: "CSE 110", name: "Programming Building Blocks", completed: true },
+    { code: "WDD 130", name: "Web Fundamentals", completed: true },
+    { code: "CSE 111", name: "Programming with Functions", completed: true },
+    { code: "CSE 210", name: "Programming with Classes", completed: false },
+    { code: "WDD 131", name: "Web Frontend Development I", completed: true },
+    { code: "WDD 231", name: "Web Frontend Development II", completed: false }
 ];
 
 // DOM Elements
-const courseList = document.getElementById("courseList");
-const certificateList = document.getElementById("certificateList");
-const totalCreditsElem = document.getElementById("totalCredits");
+const certificateList = document.getElementById('certificateList');
+const filterAll = document.getElementById('filter-all');
+const filterCSE = document.getElementById('filter-cse');
+const filterWDD = document.getElementById('filter-wdd');
+const menuToggle = document.getElementById('menu-toggle');
+const navbarUl = document.querySelector('.navbar ul');
 
-// Display Courses
-function displayCourses(filter = "All") {
-    courseList.innerHTML = "";
-    certificateList.innerHTML = "";
-    let totalCredits = 0;
-
-    courses.forEach(course => {
-        if (filter === "All" || course.type === filter) {
-            const li = document.createElement("li");
-            li.textContent = course.name;
-            courseList.appendChild(li);
-
-            const button = document.createElement("button");
-            button.textContent = `${course.name} (${course.credits} credits)`;
-            certificateList.appendChild(button);
-
-            totalCredits += course.credits;
-        }
-    });
-
-    totalCreditsElem.textContent = totalCredits;
-}
-
-// Event Listeners for Filter Buttons
-document.getElementById("filter-all").addEventListener("click", () => displayCourses("All"));
-document.getElementById("filter-cse").addEventListener("click", () => displayCourses("CSE"));
-document.getElementById("filter-wdd").addEventListener("click", () => displayCourses("WDD"));
-
-// Responsive Menu Toggle
-const menuToggle = document.getElementById("menu-toggle");
-const navbarList = document.querySelector(".navbar ul");
-menuToggle.addEventListener("click", () => {
-    navbarList.classList.toggle("active");
+// Toggle mobile menu
+menuToggle?.addEventListener('click', () => {
+    navbarUl.classList.toggle('show');
 });
 
-// Footer: Update year and last modified date
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+// Filter courses
+function filterCourses(type = 'all') {
+    certificateList.innerHTML = '';
+    
+    const filteredCourses = type === 'all' 
+        ? courses 
+        : courses.filter(course => course.code.startsWith(type));
 
-// Initial Course Display
-displayCourses();
+    filteredCourses.forEach(course => {
+        const courseCard = document.createElement('div');
+        courseCard.className = `course-card ${course.completed ? 'completed' : ''}`;
+        courseCard.innerHTML = `<h3>${course.code}</h3>`;
+        certificateList.appendChild(courseCard);
+    });
+}
+
+// Add event listeners to filter buttons
+[
+    { btn: filterAll, type: 'all' },
+    { btn: filterCSE, type: 'CSE' },
+    { btn: filterWDD, type: 'WDD' }
+].forEach(({ btn, type }) => {
+    btn?.addEventListener('click', () => {
+        document.querySelectorAll('.certificate-buttons button')
+            .forEach(button => button.classList.remove('active'));
+        btn.classList.add('active');
+        filterCourses(type);
+    });
+});
+
+// Set the current year and last modified date
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = `Last Update: ${document.lastModified}`;
+
+// Initial display
+filterCourses('all');
+filterAll?.classList.add('active');

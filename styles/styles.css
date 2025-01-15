@@ -1,188 +1,229 @@
-/* Reset padding and margin for all elements */
-* {
-    padding: 0;
-    margin: 0;
+:root {
+    --primary-blue: #1B4965;
+    --nav-black: #000000;
+    --brown: #8B4513;
+    --light-gray: #E8E8E8;
+    --white: #ffffff;
 }
 
 body {
-    background-color: #fff;
-    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F0FFF0;
+    
 }
 
-/* Header styles */
-header {
-    background-color: #072C56; /* Dark blue background */
-    padding: 20px 0;
-    text-align: center;
-}
-
+/* Header */
 .hed {
+    background-color: var(--primary-blue);
+    padding: 2rem 3rem;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: rgb(7, 72, 125);
-    padding: 10px;
+    gap: 1rem;
+    position: center;
+    
 }
 
 .hed img {
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
-    margin-right: 20px;
+    width: 70px;
+    height: 70px;
+    border: 2px solid white;
 }
 
 .hed h1 {
-    color: #e3dede;
+    color: var(--white);
+    margin: 0;
     font-size: 2rem;
 }
 
-/* Navbar styles */
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: black;
+/* Navigation */
+nav {
+    background-color: var(--nav-black);
+    padding: 0.5rem;
 }
 
 .navbar ul {
-    display: flex;
     list-style: none;
-    padding: 10px;
     margin: 0;
-}
-
-.navbar ul li {
-    margin: 0 15px;
-}
-
-.navbar ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 15px;
-    font-size: 1.5em;
-}
-
-.navbar ul li a:hover {
-    color: aqua;
-}
-
-/* Section styles */
-section {
-    margin-top: 20px;
+    padding: 0;
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: center;
+    gap: 2rem;
 }
 
-section h2 {
-    text-align: center;
-    background: rgb(0, 27, 49);
-    color: #fff;
-    height: 40px;
-    padding-top: 5px;
-    border-radius: 10px;
-    font-size: 1.5em;
+.navbar a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
 }
 
-/* Table styles */
+.navbar a:hover {
+    background-color: var(--primary-blue);
+}
+
+.menu-button {
+    display: none;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section:first-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
 .table1, .table2 {
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 15px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.table1 {
-    width: 45%;
-}
-
-.table2 {
-    width: 45%;
+h2 {
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--primary-blue);
+    color: var(--white);
 }
 
 .table1 ul {
-    list-style: none;
-    padding-left: 20px;
+    padding: 1rem 2rem;
+    margin: 0;
+}
+
+.table2 {
+    text-align: center;
 }
 
 .table2 img {
-    width: 250px;
-    height: 200px;
-    margin: 20px 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 1rem;
 }
 
-figure {
-    text-align: center;
+.table2 figure {
+    margin: 0 0 1rem 0;
 }
 
-/* Certificate container styles */
+/* Certificate Section */
 .certificate-container {
-    text-align: center;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 206%;
+    
+    
 }
 
 .certificate-buttons {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    border-bottom: 1px solid #000;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
 }
 
 .certificate-buttons button {
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    color: #fff;
-    background-color: #000;
-    margin-right: 10px;
+    background-color: var(--nav-black);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 2rem;
+    margin: 0 0.25rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.certificate-buttons button.active {
+    background-color: var(--primary-blue);
 }
 
 .certificate-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.certificate-list button {
-    width: 100%;
-    height: 40px;
-    background-color: brown;
-    color: #fff;
-    font-size: 1.3em;
-    font-weight: 300;
-    border-radius: 5px;
-}
-
-.come button {
-    background-color: #d3eaf0;
-    color: #000;
-    border: 1px solid wheat;
-}
-
-/* Footer styles */
-footer {
+    gap: 1rem;
+    padding: 1rem;
     text-align: center;
-    background-color: rgb(6, 51, 89);
-    color: #ebe6e6;
-    padding: 15px 0;
+}
+
+.course-card {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 4px;
+    color: var(--white);
+}
+
+.course-card:not(.completed) {
+    background-color: var(--light-gray);
+    color: #333;
+}
+
+.course-card.completed {
+    background-color: var(--brown);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
 }
 
 footer p {
-    margin: 0;
-    line-height: 1.5;
+    margin: 0.5rem 0;
 }
 
 footer img {
     vertical-align: middle;
-    margin-left: 5px;
-    width: 20px;
+    height: 20px;
+    margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    section:first-of-type {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-button {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .certificate-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .certificate-list {
+        grid-template-columns: 1fr;
+    }
 }
