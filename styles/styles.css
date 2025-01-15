@@ -151,7 +151,7 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 1rem;
-    text-align: center;
+    
 }
 
 .course-card {
