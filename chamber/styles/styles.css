@@ -74,8 +74,8 @@
     bottom: 20px;
     right: 20px;
     padding: 15px 20px;
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: #003366;
+    color: #FFFFFF;
     border: none;
     cursor: pointer;
     font-weight: bold;
@@ -162,7 +162,8 @@
   #toggleView {
     margin: 20px 0;
     padding: 10px 20px;
-    background-color: var(--primary-color);
+    background-color: #003366;
+    color: #FFFFFF;
     border: none;
     cursor: pointer;
     font-weight: bold;
@@ -172,8 +173,8 @@
   #toggleView:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
-    background-color: var(--secondary-color);
-    color: #fff;
+    background-color: #003366;
+    color: #FFFFFF;
   }
   
   /* Footer */
