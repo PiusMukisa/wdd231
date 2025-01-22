@@ -179,10 +179,10 @@
   
   /* Footer */
   .footer {
-    background-color: var(--primary-color);
+    background-color: #003366;
     padding: 20px;
     text-align: center;
-    color: var(--text-color);
+    color: #FFFFFF;
     font-weight: bold;
   }
   
