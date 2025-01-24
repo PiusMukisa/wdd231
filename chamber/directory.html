@@ -5,8 +5,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta property="og:title" content="Chamber Directory - Pius Mukisa Chamber of Commerce">
    <meta property="og:type" content="website" />
-   <meta property="og:image" content="https://piusmukisa.github.io/wdd231/chamber/images/logo.png" />
-   <meta property="og:url" content="https://piusmukisa.github.io/wdd231/chamber/" /> <!-- Updated to GitHub Pages URL -->
+   <meta property="og:image" content="https://piusmukisa.github.io/wdd231/chamber/images/logo.png">
+   <meta property="og:url" content="https://piusmukisa.github.io/wdd231/chamber/" />
    <meta name="facebook:card" content="summary_large_image">
    <meta name="description" content="Explore the Buenos Aires Chamber of Commerce Directory - Your gateway to local businesses and community connections">
    <meta name="author" content="Pius Mukisa">   
@@ -21,10 +21,17 @@
    <header class="header">
        <img src="images/logo.png" alt="Buenos Aires Chamber Logo">
        <nav>
-         <a href="#" aria-label="Navigate to Home">Home</a>
-         <a href="#" aria-label="Navigate to Directory">Directory</a>
-         <a href="#" aria-label="Navigate to About Us">About</a>
-         <a href="#" aria-label="Navigate to Contact Us">Contact</a>
+         <div class="hamburger-menu" id="hamburgerMenu">
+           <div class="bar"></div>
+           <div class="bar"></div>
+           <div class="bar"></div>
+         </div>
+         <div class="nav-links" id="navLinks">
+           <a href="#" aria-label="Navigate to Home">Home</a>
+           <a href="#" aria-label="Navigate to Directory">Directory</a>
+           <a href="#" aria-label="Navigate to About Us">About</a>
+           <a href="#" aria-label="Navigate to Contact Us">Contact</a>
+         </div>
        </nav>
    </header>
    <main>
