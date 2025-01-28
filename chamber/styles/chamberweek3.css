@@ -193,9 +193,9 @@
   }
   
   #toggleView:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: #003366;
     transform: translateY(-5px);
-    background-color: var(--secondary-color);
+    background-color: #003366;
     color: #fff;
   }
   
