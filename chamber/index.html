@@ -7,11 +7,11 @@
   <meta name="author" content="Octavio Bottari">
   <meta property="og:title" content="Buenos Aires Chamber Home">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://piusmukisa.github.io/wdd231/chamber/images/logo.png"/>
-  <meta property="og:url" content="https://piusmukisa.github.io/wdd231/chamber/" />
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:url" content="https://example.com/index.html">
   <title>Buenos Aires Chamber Home</title>
-  <link rel="stylesheet" href="styles/chamberweek3.css">
-  <script src="scripts/chamberweek3.js" defer></script>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/scripts.js" defer></script>
   <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
@@ -34,7 +34,7 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
-  </header>  
+  </header>
   <main>
     <!-- Hero Section -->
     <section class="hero">
@@ -44,29 +44,31 @@
         <a href="join.html" class="hero-button" aria-label="Join the Buenos Aires Chamber">JOIN NOW</a>
       </div>
     </section>
+
     <!-- Current Events Section -->
     <div class="content">
-    <section class="current-events">
-      <h2>Upcoming Events</h2>
-      <p>Stay tuned for exciting events hosted by the Buenos Aires Chamber of Commerce.</p>
-    </section>
-    <!-- Weather Section -->
-    <section class="weather">
-      <h2>Current Weather</h2>
-      <div id="weather-container">
-        <p id="weather-description">Loading...</p>
-        <p id="temperature">Loading...</p>
-        <h3>3-Day Forecast</h3>
-        <div id="forecast"></div>
-      </div>
-    </section>
-    <!-- Spotlight Members Section -->
+        <section class="current-events">
+          <h2>Upcoming Events</h2>
+          <p>Stay tuned for exciting events hosted by the Buenos Aires Chamber of Commerce. Get ready for a series of cutting-edge networking opportunities, worlld-class speakers, and games-changing insights that will elevate your proffessional expreience. Don't miss out  the chance to be part of something extraordinary</p>
+        </section>
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Current Weather</h2>
+            <div id="weather-container">
+              <p id="weather-description">Loading...</p>
+              <p id="temperature">Loading...</p>
+              <h3>3-Day Forecast</h3>
+              <div id="forecast"></div>
+            </div>
+        </section>
+    <!-- SpotlightMembers Section -->
     <section class="spotlights">
       <h2>Member Spotlights</h2>
       <div id="spotlight-container" class="list-view"></div>
     </section>
 </div>
   </main>
+
   <footer class="footer">
     <div class="contact-info">
       <p>Contact us at: info@buenosaireschamber.com</p>
@@ -78,17 +80,20 @@
     </div>
     <p>&copy; <span id="currentYear"></span> | Last Updated: <span id="lastModified"></span></p>
   </footer>
+
   <script>
     const apiKey = '7628821d2985129f91ea402d5e5ef0d2';
     const city = 'Buenos Aires';  
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
+
     fetch(weatherUrl)
       .then(response => response.json())
       .then(data => {
         document.getElementById('weather-description').textContent = `Weather: ${data.weather[0].description.replace(/\b\w/g, char => char.toUpperCase())}`;
         document.getElementById('temperature').textContent = `Temperature: ${Math.round(data.main.temp)}°C`;
       });
+
     fetch(forecastUrl)
       .then(response => response.json())
       .then(data => {
@@ -103,6 +108,7 @@
         }
         document.getElementById('forecast').innerHTML = forecastHTML;
       });
+
     // Fetch spotlight members (gold/silver members) from JSON data
     fetch('data/members.json')
       .then(response => response.json())
@@ -110,6 +116,7 @@
         const spotlightContainer = document.getElementById('spotlight-container');
         const spotlightMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
         spotlightMembers.sort(() => Math.random() - 0.5); // Randomize the spotlights
+
         spotlightMembers.slice(0, 3).forEach(member => {
           const memberCard = document.createElement('div');
           memberCard.classList.add('member-card');
@@ -124,6 +131,7 @@
           spotlightContainer.appendChild(memberCard);
         });
       });
+
     // Set dynamic footer date
     document.getElementById('currentYear').textContent = new Date().getFullYear();
     document.getElementById('lastModified').textContent = document.lastModified;
