@@ -18,20 +18,19 @@
     <title>Chamber Directory - Pius Mukisa Chamber of Commerce</title>
 </head>
 <body>
-    <header class="header">
-        <img src="images/logo.png" alt="Buenos Aires Chamber Logo">
-        <nav>
-            <div class="hamburger-menu" id="hamburgerMenu">
-                <div class="bar"></div>
-                <div class="bar"></div>   
-                <div class="bar"></div>
-            </div>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" aria-label="Navigate to Home">Home</a>
-                <a href="directory.html" aria-label="Navigate to Directory">Directory</a>
-                <a href="#" aria-label="Navigate to About Us">About</a>
-                <a href="#" aria-label="Navigate to Contact Us">Contact</a>
-            </div>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo of P Chamber of Commerce">
+
+        </div>
+        <nav class="nav-menu">
+            <div class="hamburger-menu">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Business Directory</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -46,6 +45,7 @@
             <button id="toggleView" class="toggleView" :hoover><aria-label="Toggle between list and grid view">TOGGLE VIEW</button>
             <div id="memberContainer" class="list-view"></div>
         </div>
+
     </main>
     <footer class="footer">
         <div class="business-cards">
@@ -86,5 +86,6 @@
 
     </footer>
     <script src="scripts/scripts.js" defer></script>
+    
 </body>
 </html>
