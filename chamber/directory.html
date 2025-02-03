@@ -43,7 +43,7 @@
         </section>
         <div class="content">
             <h2>Welcome to the Buenos Aires Chamber Directory</h2>
-            <button id="toggleView" aria-label="Toggle between list and grid view">TOGGLE VIEW</button>
+            <button id="toggleView" class="toggleView" :hoover><aria-label="Toggle between list and grid view">TOGGLE VIEW</button>
             <div id="memberContainer" class="list-view"></div>
         </div>
     </main>
@@ -60,7 +60,7 @@
             <div class="business-card">
                 <img src="images/piusmuksiaimage.jpg" alt="Javier Milei">
                 <div class="card-info">
-                    <p class="name">Piuss Mukisa</p>
+                    <p class="name">Pius Mukisa</p>
                     <p class="position">Director</p>
                     <p class="company">Buenos Aires Chamber of Commerce</p>
                 </div>
@@ -83,6 +83,7 @@
             <a href="https://www.instagram.com" target="_blank" aria-label="Visit our Instagram page"><i class="fab fa-instagram"></i></a>
         </div>
         <p>&copy; <span id="currentYear"></span> | Last Updated: <span id="lastModified"></span></p>
+
     </footer>
     <script src="scripts/scripts.js" defer></script>
 </body>

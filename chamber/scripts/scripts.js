@@ -1,46 +1,58 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const memberContainer = document.getElementById("memberContainer");
-    const toggleViewButton = document.getElementById("toggleView");
-  
-    // Fetch members.json and populate the directory
-    fetch("data/members.json")
-      .then((response) => response.json())
-      .then((members) => {
-        renderMembers(members, "list-view");
-  
-        // Toggle view event listener
-        toggleViewButton.addEventListener("click", () => {
-          const currentView = memberContainer.classList.contains("list-view") ? "list-view" : "grid-view";
-          const newView = currentView === "list-view" ? "grid-view" : "list-view";
-          memberContainer.classList.remove(currentView);
-          memberContainer.classList.add(newView);
-          renderMembers(members, newView);
-        });
+  const memberContainer = document.getElementById("memberContainer");
+  const toggleViewButton = document.getElementById("toggleView");
+
+  // Fetch members.json and populate the directory
+  fetch("data/members.json")
+    .then((response) => response.json())
+    .then((members) => {
+      renderMembers(members, "list-view");
+
+      // Toggle view event listener
+      toggleViewButton.addEventListener("click", () => {
+        const currentView = memberContainer.classList.contains("list-view") ? "list-view" : "grid-view";
+        const newView = currentView === "list-view" ? "grid-view" : "list-view";
+        memberContainer.classList.remove(currentView);
+        memberContainer.classList.add(newView);
+        renderMembers(members, newView);
       });
-  
-    // Function to render members
-    function renderMembers(members, view) {
-      memberContainer.innerHTML = "";
-      members.forEach((member) => {
-        const card = document.createElement("div");
-        card.className = `member-card ${view}`;
-        card.innerHTML = `
-          <img src="images/${member.image}" alt="${member.name}" class="logo" onError="this.src='images/default.jpg'">
-          <h2>${member.name}</h2>
-          <p>${member.address}</p>
-          <p>${member.phone}</p>
-          <a href="${member.website}" target="_blank">Visit Website</a>
-        `;
-        memberContainer.appendChild(card);
-      });
-    }
-  
-    // Hamburger menu toggle for mobile navigation
-    const hamburger = document.querySelector(".hamburger");
-    const mobileNav = document.querySelector(".mobile-nav");
-  
-    hamburger.addEventListener("click", () => {
-      mobileNav.classList.toggle("open");
+    })
+    .catch((error) => console.error("Error loading members.json:", error));
+
+  // Function to render members
+  function renderMembers(members, view) {
+    memberContainer.innerHTML = "";
+    members.forEach((member) => {
+      const card = document.createElement("div");
+      card.className = `member-card ${view}`;
+      card.innerHTML = `
+        <img src="images/${member.image}" alt="${member.name}" class="logo" onError="this.src='images/default.jpg'">
+        <h2>${member.name}</h2>
+        <p>${member.address}</p>
+        <p>${member.phone}</p>
+        <a href="${member.website}" target="_blank">Visit Website</a>
+      `;
+      memberContainer.appendChild(card);
     });
-  });
-  
+  }
+
+  // Hamburger menu toggle for mobile navigation
+  const hamburger = document.querySelector(".hamburger");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  if (hamburger && mobileNav) {
+      hamburger.addEventListener("click", () => {
+          mobileNav.classList.toggle("open");
+          mobileNav.classList.toggle("hidden");
+      });
+  }
+
+  // Set footer year
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+  // Set last modified date
+  const lastModifiedElement = document.getElementById("lastModified");
+  if (lastModifiedElement) {
+      lastModifiedElement.textContent = document.lastModified;
+  }
+});

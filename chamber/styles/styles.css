@@ -1,39 +1,45 @@
 /* Root Variables */
 :root {
-  --primary-color: #149997;
-  --secondary-color: #0a4746;
-  --text-color: #000;
-  --background-color: #f0f0f0;
-  --font-family: 'Arial', sans-serif;
-  --transition: transform 0.3s ease, box-shadow 0.3s ease;
+  --primary-color: #09253E;
+  --secondary-color: #361D2E;
+  --background-color: white;
+  --accent1-color: #F78A25;
+  --accent2-color: #84929f;
+  --text1-color: #171219;
+  --text2-color: #F9F9F9;
+  --link-color: #006400;
 }
 
 /* Global Styles */
 body, html {
   font-family: 'Bebas Neue', sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 10px;
   overflow-x: hidden;
+  
 }
 
 a {
   text-decoration: none;
   color: var(--text-color);
   transition: color 0.3s ease;
+  
 }
 
 a:hover {
   color: var(--secondary-color);
+  
 }
 
 /* Header */
 .header {
-  background-color: #ffffff;
-  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--text2-color);
+  padding: 1rem;
+  position: relative;
 }
 
 .header img {
@@ -128,6 +134,24 @@ a:hover {
   background-color: var(--secondary-color);
   color: #fff;
 }
+.toggleView{
+  
+  bottom: 20px;
+  right: 20px;
+  padding: 20px 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition);
+}
+.toggleView:hoover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  background-color: var(--secondary-color);
+  color: #fff;
+}
 
 /* Weather Section */
 .weather {
@@ -185,7 +209,7 @@ a:hover {
 }
 
 #memberContainer {
-  display: flex;
+  display:grid;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -231,9 +255,10 @@ a:hover {
 /* Footer */
 .footer {
   background-color: var(--primary-color);
+  color: var(--text2-color);
   padding: 20px;
   text-align: center;
-  color: var(--text-color);
+  color:var(--text2-color);
   font-weight: bold;
 }
 
@@ -246,6 +271,7 @@ a:hover {
 
 .footer .business-card {
   background-color: #fff;
+  color: black;
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
