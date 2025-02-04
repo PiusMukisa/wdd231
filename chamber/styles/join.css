@@ -630,7 +630,7 @@ header h1 {
   
   /* Card Styling */
   .card {
-    background-color: #fff;
+    background-color: #1f0606;
     border: 1px solid #ddd;
     border-radius: 8px;
     width: 250px;
@@ -645,20 +645,20 @@ header h1 {
   /* Card Text */
   .card h3 {
     font-size: 1.3em;
-    color: #333;
+    color: #c29e9e;
     font-weight: bold;
     margin-bottom: 15px;
   }
   
   .card p {
     font-size: 1em;
-    color: #777;
+    color: #f7f5f5;
     margin-bottom: 20px;
   }
   
   /* Button Styling */
   .card button {
-    background-color: #007bff;
+    background-color: #003366;
     color: #fff;
     border: none;
     padding: 10px 20px;
