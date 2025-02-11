@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('lastVisit', currentDate.toString());
 
     // Fetch and populate locations from JSON
-    
     fetch('data/locations.json')
         .then(response => response.json())
         .then(data => {
@@ -34,13 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
             data.locations.forEach(location => {
                 const card = document.createElement('div');
                 card.classList.add('location-card');
+                
+                // Create Learn More link dynamically
+                let learnMoreLink = location.url ? `<a href="${location.url}" class="learn-more" target="_blank">Learn More</a>` : '';
+
                 card.innerHTML = `
                     <img src="${location.image}" alt="${location.title}">
                     <h2>${location.title}</h2>
                     <p>${location.description}</p>
                     <p><strong>Address:</strong> ${location.address}</p>
-                    <a href="#" class="learn-more">Learn More</a>
+                    ${learnMoreLink} <!-- Only show the link if there's a URL -->
                 `;
+
                 container.appendChild(card);
             });
         })

@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     // ----------------------------
     // 1. Hamburger Menu Functionality
@@ -9,6 +8,24 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.addEventListener("click", () => {
       mobileNav.classList.toggle("open");
       mobileNav.classList.toggle("hidden");
+    });
+
+    document.querySelector('.hamburger-menu').addEventListener('click', function() {
+        document.querySelector('.nav-menu').classList.toggle('active');
+    });
+    
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
     });
   
    // ----------------------------
@@ -145,29 +162,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // 7. Thank You Page: Display Submitted Data
     // ----------------------------
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.toString()) {
-      document.getElementById("display-first-name").textContent =
-        urlParams.get("first-name");
-      document.getElementById("display-last-name").textContent =
-        urlParams.get("last-name");
-      document.getElementById("display-email").textContent =
-        urlParams.get("email");
-      document.getElementById("display-phone").textContent =
-        urlParams.get("phone");
-      document.getElementById("display-business-name").textContent =
-        urlParams.get("business-name");
-      document.getElementById("display-timestamp").textContent =
-        urlParams.get("timestamp");
-    }
-  });
-    // Set footer year
-    const currentYear = document.getElementById("currentYear");
-    if (currentYear) {
-        currentYear.textContent = new Date().getFullYear();
-    }
-  
+    const firstName = urlParams.get('first-name');
+    const lastName = urlParams.get('last-name');
+    const phone = urlParams.get('phone');
+    const businessName = urlParams.get('business-name');
+    const timestamp = urlParams.get('timestamp');
+
+    document.getElementById('display-first-name').textContent = firstName || 'N/A';
+    document.getElementById('display-last-name').textContent = lastName || 'N/A';
+    document.getElementById('display-phone').textContent = phone || 'N/A';
+    document.getElementById('display-business-name').textContent = businessName || 'N/A';
+    document.getElementById('display-timestamp').textContent = timestamp || 'N/A';
+
     // Set last modified date
     const lastModifiedElement = document.getElementById("lastModified");
     if (lastModifiedElement) {
         lastModifiedElement.textContent = document.lastModified;
     }
+});
+
+
