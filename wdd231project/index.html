@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover amazing travel destinations and plan your next adventure with WorldWanderer">
+    <title>WorldWanderer - Your Ultimate Travel Companion</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="WorldWanderer - Your Ultimate Travel Companion">
+    <meta property="og:description" content="Discover amazing travel destinations and plan your next adventure.">
+    <meta property="og:image" content="images/social-preview.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.jpeg" alt="WorldWanderer Logo" width="150" height="50">
+                </div>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="planner.html">Trip Planner</a></li>
+                    <li><a href="https://webmail.au.syrahost.com/" class="btn-outline">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Explore the World's Wonders</h1>
+                <p>Discover breathtaking destinations, create unforgettable memories, and embark on your next adventure</p>
+                <div class="hero-buttons">
+                    <a href="destinations.html" class="btn btn-primary">Explore Destinations</a>
+                    <a href="planner.html" class="btn btn-outline">Plan Your Trip</a>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+    </header>
+    <main>
+
+        <section class="featured-destinations">
+            <h2>Popular Destinations</h2>
+            <div id="destinations-grid" class="destinations-grid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="weather-widget">
+            <h2>Travel Weather</h2>
+            <div id="weather-container">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <div id="destination-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modal-details">
+                    <!-- Dynamically populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+   
+
+
+
+        <!-- Featured Experiences -->
+        <section class="experiences-section">
+            <div class="section-header">
+                <h3>Unforgettable Experiences</h3>
+                <p>Create memories that last a lifetime</p>
+            </div>
+            <div class="experiences-grid">
+                <div class="experience-card">
+                    <img src="images/safari.jpg" alt="African Safari" loading="lazy">
+                    <div class="experience-content">
+                        <h3>African Safari</h3>
+                        <p>Witness the majestic wildlife up close</p>
+                        
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <img src="images/northern-lights.jpg" alt="Northern Lights" loading="lazy">
+                    <div class="experience-content">
+                        <h3>Northern Lights</h3>
+                        <p>Chase the aurora in Iceland</p>
+                        
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <img src="images/scubadriving.jpg" alt="Scuba Diving" loading="lazy">
+                    <div class="experience-content">
+                        <h3>Scuba Diving</h3>
+                        <p>Explore vibrant coral reefs</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="section-header">
+                <h2>Traveler Stories</h2>
+                <p>Hear from our happy adventurers and discover their unforgettable journeys, inspiring tales, and travel tips."</p>
+            </div>
+            <div class="testimonials-slider" id="testimonialSlider">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Instagram Feed -->
+        <section class="instagram-section">
+            <div class="section-header">
+                <h2>Travel Inspiration</h2>
+                <p>Follow us on Instagram @WorldWanderer</p>
+                <p>Read about their triumphs in overcoming challenges, the beauty they’ve found in unfamiliar places, and the unforgettable memories they’ve created along the way. These stories not only celebrate the joys of travel but also provide valuable insights and practical advice that could inspire your next adventure.Whether you're dreaming of a distant destination or planning your next road trip, the experiences shared by these travelers might just spark your wanderlust. Join us in celebrating the spirit of exploration and the transformative power of travel!</p>
+            </div>
+            <div class="instagram-grid">
+                <!-- Instagram feed images -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section brand">
+                    <img src="images/logo.jpeg" alt="WorldWanderer Logo" class="footer-logo">
+                    <p>Making travel dreams come true since 2024</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Pinterest" class="social-icon">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                    
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-section newsletter">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get travel inspiration and special offers</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                    <div id="subscriptionMessage" style="display: none; color: white; margin-top: 10px;"></div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 WorldWanderer. All rights reserved.</p>
+                <p><a href="attributions.html">Attributions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/destinations.js"></script>
+    <script src="scripts/menu-toggle.js"></script>
+    <script>
+        document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            document.getElementById('subscriptionMessage').textContent = `Thank you for subscribing with ${email}!`;
+            document.getElementById('subscriptionMessage').style.display = 'block';
+            event.target.reset();
+        });
+    </script>
+</body>
+</html>

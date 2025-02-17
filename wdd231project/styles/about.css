@@ -1,0 +1,227 @@
+/* General styles for the about page */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-section h1 {
+    font-size: 3em;
+    margin-bottom: 25px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 25px;
+    text-align: justify;
+}
+
+body {
+    background-image: url('../images/background.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.team-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.team-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 35px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #ff6f61;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #666;
+}
+
+.team-member .bio {
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 15px;
+}
+
+.testimonials-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 35px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.testimonial .user {
+    font-size: 1em;
+    color: #999;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.timeline-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.timeline-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 35px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.timeline-date {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.timeline-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.timeline-content p {
+    font-size: 1em;
+    color: #666;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

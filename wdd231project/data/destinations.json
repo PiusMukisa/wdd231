@@ -1,0 +1,50 @@
+{
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Paris, France",
+      "region": "europe",
+      "description": "The City of Light beckons with its magnificent architecture, art museums, and culinary excellence.",
+      "image": "images/safari-travels.jpg",
+      "highlights": ["Eiffel Tower", "Louvre Museum", "Notre-Dame Cathedral"],
+      "rating": 4.8,
+      "price_level": "moderate",
+      "best_time": "April to October",
+      "coordinates": {
+        "lat": 48.8566,
+        "lng": 2.3522
+      }
+    },
+    {
+      "id": 2,
+      "name": "Kyoto, Japan",
+      "region": "asia",
+      "description": "Experience traditional Japan through ancient temples, serene gardens, and tea ceremonies.",
+      "image": "images/kyoto-japan.jpg",
+      "highlights": ["Fushimi Inari Shrine", "Arashiyama Bamboo Grove", "Kinkaku-ji"],
+      "rating": 4.7,
+      "price_level": "moderate",
+      "best_time": "March to May",
+      "coordinates": {
+        "lat": 35.0116,
+        "lng": 135.7681
+      }
+    },
+
+    {
+      "id": 4,
+      "name": "Cape Town, South Africa",
+      "region": "africa",
+      "description": "A stunning coastal city with dramatic mountains, diverse culture, and rich history.",
+      "image": "images/cap-town.jpg",
+      "highlights": ["Table Mountain", "Robben Island", "Cape of Good Hope"],
+      "rating": 4.6,
+      "price_level": "budget",
+      "best_time": "October to April",
+      "coordinates": {
+        "lat": -33.9249,
+        "lng": 18.4241
+      }
+    }
+  ]
+}

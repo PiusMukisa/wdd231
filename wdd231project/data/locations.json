@@ -1,0 +1,67 @@
+{
+  "locations": [
+    {
+      "title": "Serengeti National Park",
+      "address": "Plot 123, Kololo Hill Drive",
+      "description": "Historic grounds where Uganda's independence was celebrated. Now hosts major events and recreational activities in the heart of Kampala.",
+      "url": "https://www.serengeti.com/",
+      "image": "images/tanzania.jpg"
+    },
+    {
+      "title": "Pyramids, Egypt",
+      "best_time": "October to April",
+      "description": "Ancient wonders of the world, with rich history and culture.",
+      "url": "https://www.britannica.com/topic/Pyramids-of-Giza",
+      "image": "images/egypt.jpg"
+    },
+    {
+      "title": "Zanzibar, Tanzania",
+      "best_time": "June to October",
+      "description": "A tropical paradise with beautiful beaches and rich history",
+      "url": "https://where-to-stay.travel/zanzibar/?gad_source=1&gclid=CjwKCAiA8Lu9BhA8EiwAag16bx_FkYejYeeMg1zNqWZVbEvcevndEN_RPbS03tuMc4keHpV9CXXX0xoCKoMQAvD_BwE",
+      "image": "images/zamzibar.jpg"
+    },
+    {
+      "title": "Maasai Mara, Kenya",
+      "best_time": "July to October.",
+      "description": "Famous for wildlife safaris, including the Great Migration",
+      "url": "https://www.balloonscanner.com/flight-zones/masai-mara?gad_source=1&gclid=CjwKCAiA8Lu9BhA8EiwAag16byI_x3HtNzrKHAWPb1sh1rGc6xmFjtA33_XK65uYT2e5BJyv1u4YExoC42wQAvD_BwE",
+      "image": "images/massai.jpg"
+    },
+    {
+      "title": "Bazaruto Archipelago",
+      "best_time": "May to November.",
+      "description": "A pristine collection of islands perfect for snorkeling and diving.",
+      "url": "https://www.tripadvisor.com/SmartDeals-g298352-Bazaruto_Archipelago_Inhambane_Province-Hotel-Deals.html",
+      "image": "images/mozambique.jpg"
+    },
+    {
+      "title": "Victoria Falls",
+      "best_time": " February to May",
+      "description": "One of the largest and most famous waterfalls in the world.",
+      "url": "https://pure.africa/sunset-cruise-zambezi-explorer-signature-deck/?gad_source=1&gclid=CjwKCAiA8Lu9BhA8EiwAag16bxQYQeasyznVYpvxAZYkK9B2Oai7eqD55BEKNvwqFsCIJ4AElBLxYBoCCz0QAvD_BwE",
+      "image": "images/victoriafall.jpg"
+    },
+    {
+      "title": "Cape Town",
+      "best_time": "November to March.",
+      "description": "Known for Table Mountain, beautiful beaches, and vibrant culture.",
+      "url": "https://www.viator.com/Cape-Town-tourism/d318-r26940654491-s383235131?m=28353&supag=119539870696&supca=12519862705&supsc=aud-2226856787438:kwd-24498211&supai=692007811372&supdv=c&supnt=g&suplp=9069985&supli=1028745&supti=aud-2226856787438:kwd-24498211&tsem=true&supci=aud-2226856787438:kwd-24498211&supap1=&supap2=&supfi=&gad_source=1&gclid=CjwKCAiA8Lu9BhA8EiwAag16byRstvfKntUX6VwAL5Ciw0L_a7shC3hMVQqW69OL2kuopjYPCimyzhoCyQYQAvD_BwE",
+      "image": "images/cap-town.jpg"
+    },
+    {
+      "title": "Kyoto, Japan",
+      "best_time": "September to November",
+      "description": "A city rich in history, with numerous temples, traditional tea houses, and beautiful cherry blossoms.",
+      "url": "https://kyoto-ryokan.co.jp/?gad_source=1&gclid=CjwKCAiA8Lu9BhA8EiwAag16b8gsVqrRhsu4v6nynpAJIFcxebPPOoPPlOc5UcSzCc7j1sCu-OpZPBoCTtkQAvD_BwE",
+      "image": "images/kyoto-japan.jpg"
+    },
+    {
+      "title": "Venice, Italy",
+      "best_time": "April to June",
+      "description": "A city of canals, historic architecture, and rich cultural heritage. Best explored on foot or by gondola.",
+      "url": "https://en.wikipedia.org/wiki/Venice",
+      "image": "images/italy.jpg"
+    }
+  ]
+}
