@@ -294,10 +294,17 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 WorldWanderer. All rights reserved.</p>
                 <p><a href="attributions.html">Attributions</a></p>
+                <p id="lastModified"></p>
             </div>
         </div>
     </footer>
 
     <script type="module" src="scripts/planner.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lastModified = new Date(document.lastModified);
+            document.getElementById('lastModified').textContent = `Last Modified: ${lastModified.toLocaleDateString()} ${lastModified.toLocaleTimeString()}`;
+        });
+    </script>
 </body>
 </html>

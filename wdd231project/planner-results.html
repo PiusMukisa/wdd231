@@ -88,7 +88,14 @@
             <a href="planner.html" class="back-btn">Plan Another Trip</a>
         </section>
     </main>
-</body>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-bottom">
+                <p>&copy; 2025 WorldWanderer. All rights reserved.</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
@@ -98,6 +105,10 @@
         document.getElementById('result-budget').textContent = urlParams.get('budget');
         document.getElementById('result-interests').textContent = urlParams.getAll('interests').join(', ');
         document.getElementById('result-notes').textContent = urlParams.get('notes');
+
+        const lastModified = new Date(document.lastModified);
+        document.getElementById('lastModified').textContent = `Last Modified: ${lastModified.toLocaleDateString()} ${lastModified.toLocaleTimeString()}`;
     });
 </script>
+</body>
 </html>

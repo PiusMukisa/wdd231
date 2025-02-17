@@ -177,6 +177,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 WorldWanderer. All rights reserved.</p>
                 <p><a href="attributions.html">Attributions</a></p>
+                <p>Last Modified: <span id="lastModified"></span></p>
             </div>
         </div>
     </footer>
@@ -191,6 +192,8 @@
             document.getElementById('subscriptionMessage').style.display = 'block';
             event.target.reset();
         });
+
+        document.getElementById('lastModified').textContent = document.lastModified;
     </script>
 </body>
 </html>

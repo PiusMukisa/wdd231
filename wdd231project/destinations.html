@@ -92,15 +92,6 @@
                     </ul>
                 </div>
 
-                <div class="footer-section links">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="#">Travel Guide</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
 
                 <div class="footer-section newsletter">
                     <h3>Subscribe to Our Newsletter</h3>
@@ -115,6 +106,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 WorldWanderer. All rights reserved.</p>
                 <p><a href="attributions.html">Attributions</a></p>
+                <p id="lastModified"></p>
             </div>
         </div>
     </footer>
@@ -123,6 +115,11 @@
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', () => {
             document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const lastModified = new Date(document.lastModified);
+            document.getElementById('lastModified').textContent = `Last Modified: ${lastModified.toLocaleDateString()} ${lastModified.toLocaleTimeString()}`;
         });
     </script>
 </body>
