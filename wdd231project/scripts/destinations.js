@@ -35,25 +35,11 @@ export function displayDestinations(destinations) {
                     <span class="rating">★ ${destination.rating}</span>
                     <span class="price-level">${destination.price_level}</span>
                 </div>
-                <button class="view-details-btn btn" data-id="${destination.id}">
-                    View Details
-                </button>
+
             </div>
         </article>
     `).join('');
 
-    // Add event listener to the container for delegation
-    container.addEventListener('click', (event) => {
-        if (event.target.classList.contains('view-details-btn')) {
-            const id = parseInt(event.target.dataset.id);
-            const destination = destinations.find(d => d.id === id);
-            if (destination) {
-                showDestinationDetails(destination);
-            } else {
-                console.error('Destination not found!');
-            }
-        }
-    });
 }
 
 // Show destination details in modal

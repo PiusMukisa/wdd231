@@ -12,6 +12,15 @@
     <meta property="og:description" content="Discover amazing travel destinations and plan your next adventure.">
     <meta property="og:image" content="images/social-preview.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0077b6; /* Used for headings and accents */
+            --secondary-color: #f4a261; /* Used for background highlights and buttons */
+            --background-color: #f4f4f4;
+            --text-color: #333;
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
@@ -49,16 +58,10 @@
         <section class="featured-destinations">
             <h2>Popular Destinations</h2>
             <div id="destinations-grid" class="destinations-grid">
-                <!-- Dynamically populated by JavaScript -->
-            </div>
+
         </section>
 
-        <section class="weather-widget">
-            <h2>Travel Weather</h2>
-            <div id="weather-container">
-                <!-- Dynamically populated by JavaScript -->
-            </div>
-        </section>
+ 
 
         <div id="destination-modal" class="modal">
             <div class="modal-content">
@@ -137,13 +140,13 @@
                     <img src="images/logo.jpeg" alt="WorldWanderer Logo" class="footer-logo">
                     <p>Making travel dreams come true since 2024</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook" class="social-icon">
+                        <a href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2FEarthWonders23%2F%3Fcheckpoint_src%3D1501092823525282#" aria-label="Facebook" class="social-icon">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="#" aria-label="Instagram" class="social-icon">
+                        <a href="https://www.instagram.com/wonderworldamusementpark/" aria-label="Instagram" class="social-icon">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" aria-label="Twitter" class="social-icon">
+                        <a href="https://x.com/verity95/status/1793227103300620553?mx=2" aria-label="Twitter" class="social-icon">
                             <i class="fab fa-twitter"></i>
                         </a>
                         <a href="#" aria-label="Pinterest" class="social-icon">
@@ -157,10 +160,11 @@
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="destinations.html">Destinations</a></li>
-                    
+                        
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
+
 
 
                 <div class="footer-section newsletter">
@@ -177,13 +181,15 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 WorldWanderer. All rights reserved.</p>
                 <p><a href="attributions.html">Attributions</a></p>
-                <p>Last Modified: <span id="lastModified"></span></p>
+                <p id="lastModified"></p>
             </div>
         </div>
     </footer>
 
     <script type="module" src="scripts/destinations.js"></script>
     <script src="scripts/menu-toggle.js"></script>
+    
+    
     <script>
         document.getElementById('newsletterForm').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -193,7 +199,8 @@
             event.target.reset();
         });
 
-        document.getElementById('lastModified').textContent = document.lastModified;
+        // Add this script to display the last modified date
+        document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
     </script>
 </body>
 </html>

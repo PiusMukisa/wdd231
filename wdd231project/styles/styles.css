@@ -1,14 +1,17 @@
 /* Modern CSS with Enhanced Visual Design */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
 :root {
     /* Modern Color Palette */
-    --primary-color: #1a365d;
-    --secondary-color: #0ea5e9;
+    --primary-color: #0077b6; /* Used for headings and accents */
+    --secondary-color: #f4a261; /* Used for background highlights and buttons */
     --accent-color: #f59e0b;
-    --background-color: #f8fafc;
+    --background-color: #f4f4f4;
     --card-bg: #ffffff;
     --text-primary: #1e293b;
     --text-secondary: #475569;
     --text-light: #94a3b8;
+    --text-color: #333;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, #1a365d 0%, #0ea5e9 100%);
@@ -40,15 +43,16 @@
 }
 
 body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: var(--text-primary);
+    color: var(--text-color);
     background-color: var(--background-color);
     overflow-x: hidden;
 }
 
 /* Enhanced Typography */
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
@@ -321,119 +325,6 @@ input:focus, select:focus, textarea:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
 }
-
-/* Enhanced Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    z-index: 1100;
-    opacity: 0;
-    transition: opacity var(--transition-normal);
-}
-
-.modal.active {
-    opacity: 1;
-}
-
-.modal-content {
-    position: relative;
-    background: var(--card-bg);
-    margin: 5% auto;
-    padding: 2.5rem;
-    width: 90%;
-    max-width: 900px;
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-xl);
-    transform: translateY(20px);
-    transition: transform var(--transition-normal);
-}
-
-.modal.active .modal-content {
-    transform: translateY(0);
-}
-
-.close-modal {
-    position: absolute;
-    right: 1.5rem;
-    top: 1.5rem;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--text-light);
-    transition: var(--transition-fast);
-}
-
-.close-modal:hover {
-    color: var(--text-primary);
-    transform: rotate(90deg);
-}
-
-/* ...existing code... */
-
-#destination-modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-#modal-details {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
-}
-
-.close-modal {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-modal:hover,
-.close-modal:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.destination-info {
-    margin-top: 20px;
-}
-
-.additional-info {
-    margin-top: 20px;
-}
-
-.menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-/* ...existing code... */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -785,5 +676,20 @@ input:focus, select:focus, textarea:focus {
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
+}
+
+.submit-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #e08e4f;
 }
 
