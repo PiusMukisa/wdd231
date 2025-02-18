@@ -1,6 +1,6 @@
 /* General styles for the about page */
 .about-section {
-    background-color: #f9f9f9;
+    background-color: #2d3748; /* Updated to a darker shade */
     padding: 60px 30px;
     text-align: center;
     border-radius: 15px;
@@ -8,12 +8,13 @@
     margin: 30px 0;
     width: 100%;
     animation: fadeIn 1s ease-in-out;
+    color: #ffffff; /* Pure white for better contrast */
 }
 
 .about-section h1 {
     font-size: 3em;
     margin-bottom: 25px;
-    color: #333;
+    color: #ffffff; /* Pure white for better contrast */
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -21,22 +22,23 @@
 .about-section p {
     font-size: 1.2em;
     line-height: 1.8;
-    color: #666;
+    color: #e2e8f0; /* Lighter shade for better contrast */
     max-width: 800px;
     margin: 0 auto 25px;
     text-align: justify;
 }
 
 body {
+    background-color: #1e293b; /* Updated to a darker shade */
     background-image: url('../images/background.jpeg');
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: #ffffff; /* Pure white for better contrast */
 }
 
 .team-section {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #2d3748; /* Updated to a darker shade */
     padding: 60px 30px;
     text-align: center;
     border-radius: 15px;
@@ -44,6 +46,7 @@ body {
     margin: 30px 0;
     width: 100%;
     animation: fadeIn 1s ease-in-out;
+    color: #ffffff; /* Pure white for better contrast */
 }
 
 .team-section h2 {
@@ -89,12 +92,12 @@ body {
 .team-member h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #333;
+    color: #0d1b2a; /* Darker shade for better contrast */
 }
 
 .team-member p {
     font-size: 1em;
-    color: #666;
+    color: #e2e8f0; /* Lighter shade for better contrast */
 }
 
 .team-member .bio {
@@ -104,7 +107,7 @@ body {
 }
 
 .testimonials-section {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #2d3748; /* Updated to a darker shade */
     padding: 60px 30px;
     text-align: center;
     border-radius: 15px;
@@ -112,6 +115,7 @@ body {
     margin: 30px 0;
     width: 100%;
     animation: fadeIn 1s ease-in-out;
+    color: #ffffff; /* Pure white for better contrast */
 }
 
 .testimonials-section h2 {
@@ -147,7 +151,7 @@ body {
 
 .testimonial p {
     font-size: 1.1em;
-    color: #666;
+    color: #e2e8f0; /* Lighter shade for better contrast */
 }
 
 .testimonial .user {
@@ -158,7 +162,7 @@ body {
 }
 
 .timeline-section {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #2d3748; /* Updated to a darker shade */
     padding: 60px 30px;
     text-align: center;
     border-radius: 15px;
@@ -166,6 +170,7 @@ body {
     margin: 30px 0;
     width: 100%;
     animation: fadeIn 1s ease-in-out;
+    color: #f8fafc; /* Updated to a lighter shade */
 }
 
 .timeline-section h2 {
@@ -208,12 +213,12 @@ body {
 .timeline-content h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #333;
+    color: #0d1b2a; /* Darker shade for better contrast */
 }
 
 .timeline-content p {
     font-size: 1em;
-    color: #666;
+    color: #e2e8f0; /* Lighter shade for better contrast */
 }
 
 @keyframes fadeIn {

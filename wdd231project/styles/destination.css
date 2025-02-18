@@ -1,3 +1,20 @@
+:root {
+    --primary-color: #0d1b2a; /* Darker shade for better contrast */
+    --secondary-color: #1b263b; /* Darker shade for better contrast */
+    --accent-color: #f59e0b;
+    --background-color: #1e293b;
+    --card-bg: #2d3748;
+    --text-primary: #ffffff; /* Pure white for better contrast */
+    --text-secondary: #e2e8f0; /* Lighter shade for better contrast */
+    --text-light: #94a3b8;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color); /* Updated background color */
+    color: var(--text-primary); /* Updated text color */
+}
+
 /* Main Content Styles */
 .discover {
     font-weight: lighter;
@@ -5,8 +22,6 @@
     margin: 2rem auto;
     padding: 0 1rem;
 }
-
-
 
 .visit-message {
     background-color: var(--accent-color);
@@ -24,14 +39,12 @@
 }
 
 .location-card {
-    
-    background: white;
+    background: var(--card-bg); /* Updated card background color */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
-
 
 .location-card:hover {
     transform: translateY(-5px);
@@ -57,9 +70,10 @@
 
 .location-info p {
     font-size: 0.2rem; /* Decreased from 0.9rem */
-    color: var(--text-color);
+    color: var(--text-secondary); /* Updated text color */
     opacity: 0.8;
 }
+
 /* Learn More Button Styles */
 .location-card .learn-more {
     display: inline-block;
@@ -77,7 +91,6 @@
     transform: scale(1.05);
 }
 
-
 /* Hover effect only on larger screens */
 @media screen and (min-width: 1025px) {
     .location-card:hover img {
@@ -92,23 +105,23 @@
 .card-content h2 {
     font-size: 1rem; /* Decreased from 1.25rem */
     margin: 0 0 0.5rem 0;
-    color: #1a365d;
+    color: var(--primary-color);
 }
 
 .card-content address {
     font-style: normal;
-    color: #4a5568;
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
 }
 
 .card-content p {
-    color: #2d3748;
+    color: var(--text-secondary);
     margin-bottom: 1rem;
     line-height: 1.5;
 }
 
 .card-content button {
-    background-color: #2b4c7e;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -118,5 +131,5 @@
 }
 
 .card-content button:hover {
-    background-color: #1a365d;
+    background-color: var(--secondary-color);
 }

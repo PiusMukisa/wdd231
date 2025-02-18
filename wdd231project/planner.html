@@ -15,10 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #0077b6; /* Used for headings and accents */
+            --primary-color: #1a365d; /* Used for headings and accents */
             --secondary-color: #f4a261; /* Used for background highlights and buttons */
             --background-color: #f4f4f4;
             --text-color: #333;
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --radius-md: 8px;
+            --transition-normal: 0.3s ease-in-out;
         }
 
         body {
@@ -35,21 +38,21 @@
         }
 
         .planner-header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px 0;
+            background-color: var(--primary-color);
+            color: black;
+            padding: 40px 20px; /* Increased padding for better readability */
             text-align: center;
-            border-bottom: 5px solid #388E3C;
+            border-bottom: 5px solid #005f8a;
         }
 
         .planner-form {
             background-color: white;
-            padding: 20px;
-            margin: 20px auto;
+            padding: 30px; /* Increased padding for better readability */
+            margin: 30px auto; /* Increased margin for better spacing */
             max-width: 600px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
+            box-shadow: var(--shadow-lg);
+            border-radius: var(--radius-md);
+            transition: transform var(--transition-normal);
         }
 
         .planner-form:hover {
@@ -62,7 +65,7 @@
 
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 10px; /* Increased margin for better spacing */
             font-weight: bold;
         }
 
@@ -70,8 +73,8 @@
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
+            padding: 12px; /* Increased padding for better readability */
+            border: 1px solid;
             border-radius: 4px;
             transition: border-color 0.3s ease-in-out;
         }
@@ -100,39 +103,41 @@
 
         .checkbox-group input {
             margin-right: 10px;
+            accent-color: var(--primary-color); /* Set checkbox color */
         }
 
         .checkbox-group label {
             margin-right: 20px;
+            color: var(--primary-color); /* Ensure label text color is visible */
         }
 
         .submit-btn {
-            background-color: var(--secondary-color);
+            background-color: var(--primary-color);
             color: white;
-            padding: 10px 20px;
+            padding: 15px 25px; /* Increased padding for better readability */
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px; /* Increased font size for better readability */
             transition: background-color 0.3s ease-in-out;
         }
 
         .submit-btn:hover {
-            background-color: #e08e4f;
+            background-color: #11100f;
         }
 
         .saved-trips {
             background-color: white;
-            padding: 20px;
-            margin: 20px auto;
+            padding: 30px; /* Increased padding for better readability */
+            margin: 30px auto; /* Increased margin for better spacing */
             max-width: 600px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            border-radius: var(--radius-md);
         }
 
         .saved-trips h2 {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px; /* Increased margin for better spacing */
         }
 
         .saved-trips-container {
@@ -146,11 +151,73 @@
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            transition: background-color 0.3s ease-in-out;
+            transition: background-color var(--transition-normal);
         }
 
         .saved-trip:hover {
             background-color: #e0e0e0;
+        }
+
+        .main-header {
+            background-color: var(--primary-color); /* Match header color */
+            color: white;
+        }
+
+        .main-footer {
+            background-color: var(--primary-color); /* Match footer color */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer-logo {
+            max-width: 150px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icon:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer-bottom a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--secondary-color);
         }
     </style>
 </head>
@@ -287,12 +354,9 @@
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="destinations.html">Destinations</a></li>
-                        
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-
-
 
                 <div class="footer-section newsletter">
                     <h3>Subscribe to Our Newsletter</h3>
